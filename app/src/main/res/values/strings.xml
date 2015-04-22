@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FaceUnlockDemo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="connect">Connect</string>
+    <string name="about">Sample project courtesy of ben@bendb.com</string>
+</resources>
