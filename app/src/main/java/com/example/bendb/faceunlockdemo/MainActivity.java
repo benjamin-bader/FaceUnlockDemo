@@ -9,8 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.bendb.faceunlock.FaceUnlock;
+import com.bendb.faceunlock.FaceUnlockCallback;
 
-public class MainActivity extends ActionBarActivity implements FaceUnlock.Callback {
+
+public class MainActivity extends ActionBarActivity implements FaceUnlockCallback {
     private FaceUnlock mFaceUnlock;
     private View mSurface;
     private Button mConnectButton;
@@ -22,8 +25,8 @@ public class MainActivity extends ActionBarActivity implements FaceUnlock.Callba
 
         mSurface = findViewById(R.id.surface);
 
-        boolean hasLock = LockUtils.hasFaceUnlock(this);
         mFaceUnlock = new FaceUnlock(this, this);
+        boolean hasLock = mFaceUnlock.isEnabled();
 
         mConnectButton = (Button) findViewById(R.id.button);
 
